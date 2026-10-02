@@ -1,0 +1,46 @@
+[project]
+name = "random-walk"
+version = "0.1.0"
+description = "Vojtěch's personal math & statistics notes"
+requires-python = ">=3.13"
+dependencies = [
+    "ipykernel",
+    "ipywidgets",
+    "matplotlib",
+    "numpy",
+    "pandas",
+    "scipy",
+    "seaborn",
+    "statsmodels",
+    "sympy",
+]
+
+[dependency-groups]
+dev = [
+    "jupyterlab",
+    "nbdime",
+    "pre-commit",
+    "pytest",
+    "ruff",
+]
+
+[build-system]
+requires = ["uv_build>=0.12,<0.13"]
+build-backend = "uv_build"
+
+[tool.ruff]
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+per-file-ignores = { "templates/*" = ["F401"] }
+
+[tool.pyright]
+include = ["src", "tests"]
+typeCheckingMode = "strict"
+pythonVersion = "3.13"
+venvPath = "."
+venv = ".venv"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
