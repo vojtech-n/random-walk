@@ -8,7 +8,8 @@ Vojtěch's personal math & statistics notes, written as Jupyter notebooks.
 brew install quarto
 uv sync
 uv run pre-commit install
-uv run nbdime config-git --enable
+uv tool install nbdime
+nbdime config-git --enable
 ```
 
 ## Use
