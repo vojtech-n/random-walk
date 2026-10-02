@@ -1,0 +1,5 @@
+---
+title: "Vojtěch's Random Walk"
+---
+
+Personal notes on math and statistics. Use the sidebar to browse topics.
