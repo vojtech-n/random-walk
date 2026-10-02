@@ -8,8 +8,9 @@ Vojtěch's personal math & statistics notes, written as Jupyter notebooks.
 brew install quarto
 uv sync
 uv run pre-commit install
-uv tool install nbdime
+uv tool install nbdime nbstripout
 nbdime config-git --enable
+nbstripout --install
 ```
 
 ## Use
