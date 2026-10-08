@@ -1,0 +1,38 @@
+---
+title: "Paper notes"
+---
+
+## Page header
+
+Top line of every sheet:
+
+```
+2026-10-08 · diagnostic-01 · p1/3
+2026-10-12 · Lang 1.3 · p1/2
+```
+
+## Problems
+
+- Number in the left margin, circled: `(7)`. Book exercise: `Ex 1.3.5`.
+- Box the final answer.
+- Wrong path: one strike-through line. Do not erase.
+- New attempt: `Att 2`.
+- `?` in the margin: unsure about this step. Ask at supervision.
+- Skipped: `S`.
+
+## Proofs
+
+```
+Given: ...
+Show:  ...
+Proof: ...
+                    ∎
+```
+
+## After the timer
+
+Mark in a second colour: ✓ / ✗ / S. Write nothing else until supervision.
+
+## Storage
+
+Loose A4 sheets, one side only, in a binder by date.
