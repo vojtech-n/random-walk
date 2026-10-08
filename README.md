@@ -15,6 +15,8 @@ nbstripout --install
 
 ## Use
 
+- Plan and progress: [ROADMAP.md](ROADMAP.md).
+- Symbols and LaTeX: `reference/symbols.qmd`.
 - New note: copy `templates/note.ipynb` into a topic folder.
 - Preview the site: `uv run quarto preview`
 - Run checks: `uv run pre-commit run --all-files`

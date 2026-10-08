@@ -1,0 +1,247 @@
+---
+title: "Symbols and LaTeX"
+---
+
+## LaTeX syntax
+
+| Write | Get | Note |
+|---|---|---|
+| `$x^2$` | $x^2$ | inline math |
+| `$$ ... $$` | display math | own line |
+| `x^{n+1}`, `a_{ij}` | $x^{n+1}$, $a_{ij}$ | braces group more than one character |
+| `\frac{a}{b}`, `\dfrac{a}{b}` | $\frac{a}{b}$, $\dfrac{a}{b}$ | `\dfrac` is full size inline |
+| `\sqrt{x}`, `\sqrt[3]{x}` | $\sqrt{x}$, $\sqrt[3]{x}$ | |
+| `\left( \frac{a}{b} \right)` | $\left( \frac{a}{b} \right)$ | brackets grow with content |
+| `\text{if } x > 0` | $\text{if } x > 0$ | words inside math |
+| `\quad` | $a \quad b$ | space |
+| `\mathbb{R}`, `\mathcal{P}`, `\mathbf{v}` | $\mathbb{R}$, $\mathcal{P}$, $\mathbf{v}$ | font styles |
+| `\sin x`, `\operatorname{rank} A` | $\sin x$, $\operatorname{rank} A$ | upright function names |
+
+Aligned steps (one `=` per line, `&` marks the align point, `\\` ends a line):
+
+```latex
+$$
+\begin{aligned}
+(a + b)^2 &= (a + b)(a + b) \\
+          &= a^2 + 2ab + b^2
+\end{aligned}
+$$
+```
+
+Cases:
+
+```latex
+$$
+\lvert x \rvert =
+\begin{cases}
+  x  & \text{if } x \ge 0, \\
+  -x & \text{if } x < 0.
+\end{cases}
+$$
+```
+
+Note blocks:
+
+```markdown
+::: {#def-even}
+## Even number (sudé číslo)
+An integer $n$ is even if $n = 2k$ for some $k \in \mathbb{Z}$.
+:::
+
+::: {.proof}
+Let $m = 2a + 1$ and $n = 2b + 1$. ...
+:::
+```
+
+Unknown symbol: draw it at [Detexify](https://detexify.kirelabs.org/classify.html).
+
+## Logic
+
+| Symbol | LaTeX | Czech | Meaning / example |
+|---|---|---|---|
+| $\neg$ | `\neg` | negace | not: $\neg P$ |
+| $\land$ | `\land` | konjunkce (a zároveň) | and: $P \land Q$ |
+| $\lor$ | `\lor` | disjunkce (nebo) | or (inclusive): $P \lor Q$ |
+| $\implies$ | `\implies` | implikace | if $P$ then $Q$: $P \implies Q$ |
+| $\iff$ | `\iff` | ekvivalence | if and only if (iff) |
+| $\forall$ | `\forall` | obecný kvantifikátor (pro všechna) | for all: $\forall x \in \mathbb{R}: x^2 \ge 0$ |
+| $\exists$ | `\exists` | existenční kvantifikátor (existuje) | there exists: $\exists n \in \mathbb{N}: n > 5$ |
+| $\exists!$ | `\exists!` | existuje právě jeden | there exists exactly one |
+| $\therefore$ | `\therefore` | tedy | therefore |
+| $\coloneqq$ | `\coloneqq` | je definováno jako | defined as: $f(x) \coloneqq x^2$ |
+| $\equiv$ | `\equiv` | je identicky rovno | identity, or congruence (see Number theory) |
+| $\blacksquare$, $\square$ | `\blacksquare`, `\square` | konec důkazu (Q.E.D.) | end of proof |
+
+## Sets
+
+| Symbol | LaTeX | Czech | Meaning / example |
+|---|---|---|---|
+| $\in$ | `\in` | je prvkem | $3 \in \mathbb{N}$ |
+| $\notin$ | `\notin` | není prvkem | $-1 \notin \mathbb{N}$ |
+| $\subseteq$ | `\subseteq` | podmnožina | every element of $A$ is in $B$ |
+| $\subsetneq$ | `\subsetneq` | vlastní podmnožina | $A \subseteq B$ and $A \neq B$ |
+| $\subset$ | `\subset` | podmnožina | ambiguous: some books mean $\subseteq$, others $\subsetneq$ |
+| $\cup$ | `\cup` | sjednocení | union: in $A$ or $B$ |
+| $\cap$ | `\cap` | průnik | intersection: in $A$ and $B$ |
+| $\setminus$ | `\setminus` | rozdíl množin | in $A$ but not in $B$ |
+| $A^c$, $\overline{A}$ | `A^c`, `\overline{A}` | doplněk | complement |
+| $\emptyset$ | `\emptyset` | prázdná množina | empty set |
+| $\{x : P(x)\}$ | `\{x : P(x)\}` | množina zadaná vlastností | set-builder: $\{x \in \mathbb{Z} : x > 0\}$ |
+| $\lvert A \rvert$ | `\lvert A \rvert` | mohutnost (počet prvků) | cardinality |
+| $A \times B$ | `A \times B` | kartézský součin | all pairs $(a, b)$ |
+| $\mathcal{P}(A)$ | `\mathcal{P}(A)` | potenční množina | power set: all subsets of $A$ |
+| $\mathbb{N}$ | `\mathbb{N}` | přirozená čísla | $1, 2, 3, \dots$ (some books include $0$) |
+| $\mathbb{Z}$ | `\mathbb{Z}` | celá čísla | integers |
+| $\mathbb{Q}$ | `\mathbb{Q}` | racionální čísla | rationals: $\frac{p}{q}$ |
+| $\mathbb{R}$ | `\mathbb{R}` | reálná čísla | reals |
+| $\mathbb{C}$ | `\mathbb{C}` | komplexní čísla | complex numbers |
+| $[a, b]$ | `[a, b]` | uzavřený interval | Czech schools write $\langle a, b \rangle$ |
+| $(a, b)$ | `(a, b)` | otevřený interval | $a < x < b$ |
+| $\infty$ | `\infty` | nekonečno | infinity |
+
+## Algebra and numbers
+
+| Symbol | LaTeX | Czech | Meaning / example |
+|---|---|---|---|
+| $\frac{a}{b}$ | `\frac{a}{b}` | zlomek; $a$ čitatel, $b$ jmenovatel | fraction; $a$ numerator, $b$ denominator |
+| $a^n$ | `a^n` | mocnina; $a$ základ, $n$ exponent (mocnitel) | power; base, exponent |
+| $\sqrt[n]{a}$ | `\sqrt[n]{a}` | $n$-tá odmocnina | $n$-th root |
+| $\lvert x \rvert$ | `\lvert x \rvert` | absolutní hodnota | distance from $0$ |
+| $\neq$ | `\neq` | není rovno | not equal |
+| $\approx$ | `\approx` | přibližně rovno | $\pi \approx 3.14$ |
+| $\le$, $\ge$ | `\le`, `\ge` | menší nebo rovno, větší nebo rovno | inequality (nerovnost) |
+| $\pm$ | `\pm` | plus minus | $x = \pm 2$ |
+| $\propto$ | `\propto` | je přímo úměrné | proportional to |
+| $n!$ | `n!` | faktoriál | $4! = 24$ |
+| $\binom{n}{k}$ | `\binom{n}{k}` | kombinační číslo | $n$ choose $k$ |
+| $\sum_{i=1}^{n}$ | `\sum_{i=1}^{n}` | suma (součet) | $\sum_{i=1}^{3} i = 6$ |
+| $\prod_{i=1}^{n}$ | `\prod_{i=1}^{n}` | součin | product |
+| $\lfloor x \rfloor$ | `\lfloor x \rfloor` | dolní celá část | floor: $\lfloor 2.7 \rfloor = 2$ |
+| $\lceil x \rceil$ | `\lceil x \rceil` | horní celá část | ceiling: $\lceil 2.1 \rceil = 3$ |
+| $i$ | `i` | imaginární jednotka | $i^2 = -1$ |
+| $\overline{z}$ | `\overline{z}` | komplexně sdružené číslo | conjugate |
+| $\operatorname{Re} z$, $\operatorname{Im} z$ | `\operatorname{Re} z` | reálná, imaginární část | real, imaginary part |
+
+## Number theory
+
+| Symbol | LaTeX | Czech | Meaning / example |
+|---|---|---|---|
+| $a \mid b$ | `a \mid b` | $a$ dělí $b$ | $3 \mid 12$ |
+| $a \nmid b$ | `a \nmid b` | $a$ nedělí $b$ | $5 \nmid 12$ |
+| $a \equiv b \pmod{n}$ | `a \equiv b \pmod{n}` | kongruence modulo $n$ | $n \mid a - b$: $17 \equiv 2 \pmod{5}$ |
+| $\gcd(a, b)$ | `\gcd(a, b)` | největší společný dělitel (NSD) | $\gcd(12, 18) = 6$ |
+| $\operatorname{lcm}(a, b)$ | `\operatorname{lcm}(a, b)` | nejmenší společný násobek (nsn) | $\operatorname{lcm}(4, 6) = 12$ |
+
+## Functions
+
+| Symbol | LaTeX | Czech | Meaning / example |
+|---|---|---|---|
+| $f\colon A \to B$ | `f\colon A \to B` | zobrazení z $A$ do $B$ | $A$ domain (definiční obor), $B$ codomain |
+| $x \mapsto x^2$ | `x \mapsto x^2` | $x$ se zobrazí na $x^2$ | maps to |
+| $f(A)$ | `f(A)` | obraz množiny, obor hodnot | image, range |
+| $f \circ g$ | `f \circ g` | složená funkce | composition: $(f \circ g)(x) = f(g(x))$ |
+| $f^{-1}$ | `f^{-1}` | inverzní funkce | inverse: $f^{-1}(f(x)) = x$ |
+| $e$ | `e` | Eulerovo číslo | $e \approx 2.718$ |
+| $\exp x$ | `\exp x` | exponenciála | $e^x$ |
+| $\ln x$ | `\ln x` | přirozený logaritmus | $\log_e x$ |
+| $\log_b x$ | `\log_b x` | logaritmus o základu $b$ | $\log_2 8 = 3$ |
+| $\operatorname{sgn} x$ | `\operatorname{sgn} x` | signum (znaménko) | $-1$, $0$, or $1$ |
+
+## Trigonometry and geometry
+
+| Symbol | LaTeX | Czech | Meaning / example |
+|---|---|---|---|
+| $\pi$ | `\pi` | Ludolfovo číslo | $\approx 3.14159$ |
+| $\sin$, $\cos$ | `\sin`, `\cos` | sinus, kosinus | $\sin^2 x + \cos^2 x = 1$ |
+| $\tan$, $\cot$ | `\tan`, `\cot` | tangens, kotangens | Czech writes $\operatorname{tg}$, $\operatorname{cotg}$ |
+| $\arcsin$, $\arccos$, $\arctan$ | `\arcsin` | arkussinus, arkuskosinus, arkustangens | inverse trig functions |
+| $^\circ$ | `^\circ` | stupeň | degree: $180^\circ = \pi$ rad |
+| rad | `\text{rad}` | radián | arc length on the unit circle (jednotková kružnice) |
+| $\angle ABC$ | `\angle ABC` | úhel | angle at $B$ |
+| $\triangle ABC$ | `\triangle ABC` | trojúhelník | triangle |
+| $\perp$ | `\perp` | je kolmý | perpendicular |
+| $\parallel$ | `\parallel` | je rovnoběžný | parallel |
+| $\cong$ | `\cong` | je shodný | congruent |
+| $\sim$ | `\sim` | je podobný | similar |
+| $\overline{AB}$ | `\overline{AB}` | úsečka $AB$ | segment |
+| $\lvert AB \rvert$ | `\lvert AB \rvert` | délka úsečky | length |
+
+## Calculus
+
+| Symbol | LaTeX | Czech | Meaning / example |
+|---|---|---|---|
+| $\lim_{x \to a}$ | `\lim_{x \to a}` | limita | limit |
+| $\to$ | `\to` | blíží se | tends to |
+| $\varepsilon$, $\delta$ | `\varepsilon`, `\delta` | epsilon, delta | small positive numbers in limit proofs |
+| $(a_n)$ | `(a_n)` | posloupnost | sequence |
+| $\sum_{n=1}^{\infty} a_n$ | `\sum_{n=1}^{\infty} a_n` | (nekonečná) řada | series |
+| $\sup$, $\inf$ | `\sup`, `\inf` | supremum, infimum | least upper / greatest lower bound |
+| $\max$, $\min$ | `\max`, `\min` | maximum, minimum | |
+| $f'(x)$ | `f'(x)` | derivace | derivative |
+| $\frac{dy}{dx}$ | `\frac{dy}{dx}` | derivace (Leibnizův zápis) | derivative |
+| $f''(x)$ | `f''(x)` | druhá derivace | second derivative |
+| $\frac{\partial f}{\partial x}$ | `\frac{\partial f}{\partial x}` | parciální derivace | partial derivative |
+| $\int f(x)\,dx$ | `\int f(x)\,dx` | neurčitý integrál (primitivní funkce) | antiderivative |
+| $\int_a^b f(x)\,dx$ | `\int_a^b f(x)\,dx` | určitý integrál | definite integral |
+| $\Delta x$ | `\Delta x` | přírůstek | change in $x$ |
+| $\nabla f$ | `\nabla f` | gradient | vector of partial derivatives |
+| $o(g)$, $O(g)$ | `o(g)`, `O(g)` | malé o, velké O | Landau notation: growth rate |
+
+## Linear algebra
+
+| Symbol | LaTeX | Czech | Meaning / example |
+|---|---|---|---|
+| $\mathbf{v}$, $\vec{v}$ | `\mathbf{v}`, `\vec{v}` | vektor | vector |
+| $\mathbb{R}^n$ | `\mathbb{R}^n` | $n$-rozměrný reálný prostor | $n$-tuples of reals |
+| $\lVert \mathbf{v} \rVert$ | `\lVert \mathbf{v} \rVert` | norma (velikost) | length |
+| $\mathbf{u} \cdot \mathbf{v}$, $\langle \mathbf{u}, \mathbf{v} \rangle$ | `\cdot`, `\langle \mathbf{u}, \mathbf{v} \rangle` | skalární součin | dot / inner product |
+| $\mathbf{u} \times \mathbf{v}$ | `\times` | vektorový součin | cross product |
+| $A^T$ | `A^T` | transponovaná matice | transpose |
+| $A^{-1}$ | `A^{-1}` | inverzní matice | $AA^{-1} = I$ |
+| $I$ | `I` | jednotková matice | identity matrix |
+| $\det A$ | `\det A` | determinant | |
+| $\operatorname{rank} A$ | `\operatorname{rank} A` | hodnost | rank |
+| $\dim V$ | `\dim V` | dimenze | dimension |
+| $\ker T$ | `\ker T` | jádro | kernel |
+| $\operatorname{span}$ | `\operatorname{span}` | lineární obal | all linear combinations |
+| $\lambda$ | `\lambda` | vlastní číslo | eigenvalue: $A\mathbf{v} = \lambda \mathbf{v}$ |
+| $\oplus$ | `\oplus` | direktní součet | direct sum |
+
+## Probability and statistics
+
+| Symbol | LaTeX | Czech | Meaning / example |
+|---|---|---|---|
+| $\Omega$ | `\Omega` | prostor elementárních jevů | sample space |
+| $P(A)$ | `P(A)` | pravděpodobnost | probability |
+| $P(A \mid B)$ | `P(A \mid B)` | podmíněná pravděpodobnost | probability of $A$ given $B$ |
+| $X$ | `X` | náhodná veličina | random variable |
+| $X \sim N(\mu, \sigma^2)$ | `X \sim N(\mu, \sigma^2)` | $X$ má normální rozdělení | "is distributed as" |
+| $\mathbb{E}[X]$ | `\mathbb{E}[X]` | střední hodnota | expected value |
+| $\operatorname{Var}(X)$ | `\operatorname{Var}(X)` | rozptyl | variance |
+| $\sigma$ | `\sigma` | směrodatná odchylka | standard deviation |
+| $\mu$ | `\mu` | střední hodnota | population mean |
+| $\overline{x}$ | `\overline{x}` | výběrový průměr | sample mean |
+| $\operatorname{Cov}(X, Y)$ | `\operatorname{Cov}(X, Y)` | kovariance | covariance |
+| $\rho$ | `\rho` | korelační koeficient | correlation |
+| i.i.d. | `\text{i.i.d.}` | nezávislé stejně rozdělené | independent, identically distributed |
+| $\hat{\theta}$ | `\hat{\theta}` | odhad parametru $\theta$ | estimator |
+| $\mathbf{1}_A$ | `\mathbf{1}_A` | indikátor jevu $A$ | $1$ if $A$ occurs, else $0$ |
+| $\xrightarrow{P}$ | `\xrightarrow{P}` | konvergence v pravděpodobnosti | weak law of large numbers |
+| $\xrightarrow{d}$ | `\xrightarrow{d}` | konvergence v distribuci | central limit theorem |
+
+## Greek alphabet
+
+| Letter | LaTeX | Czech | Letter | LaTeX | Czech |
+|---|---|---|---|---|---|
+| $\alpha$ | `\alpha` | alfa | $\nu$ | `\nu` | ný |
+| $\beta$ | `\beta` | beta | $\xi$, $\Xi$ | `\xi` | ksí |
+| $\gamma$, $\Gamma$ | `\gamma` | gama | $\pi$, $\Pi$ | `\pi` | pí |
+| $\delta$, $\Delta$ | `\delta` | delta | $\rho$ | `\rho` | ró |
+| $\varepsilon$ | `\varepsilon` | epsilon | $\sigma$, $\Sigma$ | `\sigma` | sigma |
+| $\zeta$ | `\zeta` | zéta | $\tau$ | `\tau` | tau |
+| $\eta$ | `\eta` | éta | $\upsilon$ | `\upsilon` | ypsilon |
+| $\theta$, $\Theta$ | `\theta` | théta | $\varphi$, $\Phi$ | `\varphi` | fí |
+| $\iota$ | `\iota` | ióta | $\chi$ | `\chi` | chí |
+| $\kappa$ | `\kappa` | kappa | $\psi$, $\Psi$ | `\psi` | psí |
+| $\lambda$, $\Lambda$ | `\lambda` | lambda | $\omega$, $\Omega$ | `\omega` | omega |
+| $\mu$ | `\mu` | mí | | | |
