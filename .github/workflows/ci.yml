@@ -18,3 +18,21 @@ jobs:
       - run: uv run pytest
       - uses: quarto-dev/quarto-actions/setup@v2
       - run: uv run quarto render
+      - if: github.event_name == 'push'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+  deploy:
+    if: github.event_name == 'push'
+    needs: check
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
