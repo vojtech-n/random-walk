@@ -16,6 +16,7 @@ nbstripout --install
 ## Use
 
 - New note: copy `templates/note.ipynb` into a topic folder.
+- Site: https://vojtech-n.github.io/random-walk/ (deployed on push to `main`).
 - Preview the site: `uv run quarto preview`
 - Run checks: `uv run pre-commit run --all-files`
 
