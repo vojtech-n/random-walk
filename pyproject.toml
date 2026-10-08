@@ -17,6 +17,7 @@ dependencies = [
 
 [dependency-groups]
 dev = [
+    "genanki>=0.13.1",
     "jupyterlab",
     "pre-commit",
     "pytest",
@@ -35,7 +36,7 @@ select = ["E", "F", "I", "UP", "B"]
 per-file-ignores = { "templates/*" = ["F401"] }
 
 [tool.pyright]
-include = ["src", "tests"]
+include = ["src", "tests", "scripts"]
 typeCheckingMode = "strict"
 pythonVersion = "3.13"
 venvPath = "."

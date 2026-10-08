@@ -18,6 +18,7 @@ nbstripout --install
 - New note: copy `templates/note.ipynb` into a topic folder.
 - Preview the site: `uv run quarto preview`
 - Run checks: `uv run pre-commit run --all-files`
+- Anki deck from def/thm divs: `uv run scripts/anki_export.py`. Div ids must be unique across notes.
 
 ## License
 
