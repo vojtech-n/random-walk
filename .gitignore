@@ -10,3 +10,4 @@ _site/
 
 /.quarto/
 **/*.quarto_ipynb
+*.apkg
