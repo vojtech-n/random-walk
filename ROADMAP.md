@@ -29,12 +29,29 @@ Exercise source for phase 1–2: Cambridge Tripos example sheets (public).
 
 ## Now
 
-- [ ] Diagnostic colle: `drills/diagnostic-01.qmd` (45 min, no calculator)
-- [ ] Pick the Lang entry chapter from the diagnostic result
-- [ ] Hammack ch. 1 (Sets)
+Week of 2026-10-08:
+
+- [ ] Fix diagnostic ✗ items 4, 6, 8, 10 from the supervision questions
+- [ ] Lang ch. 1 (Numbers): all sections, ≥50% of exercises
+- [ ] Re-do diagnostic problem 26 (odd + odd) after Lang ch. 1
+- [ ] Hammack ch. 1 (Sets) §1.1–1.3
+- [ ] Next: Lang ch. 2–4 (linear equations, real numbers, quadratic equations)
 
 ## Re-prove queue
 
 ## Weak spots
 
+From diagnostic-01 (2026-10-08):
+
+- Algebra: signs when expanding, factoring, cancelling terms instead of factors
+- Exponents: negative and fractional exponents
+- Logarithms: definition of $\ln$
+- Inequalities with absolute value
+- Functions: composition, inverse, equation of a line
+- Trigonometry and geometry: all
+- Derivatives: product rule
+- Proofs: using definitions, checking a claim on an example
+
 ## Done
+
+- [x] Diagnostic colle (2026-10-08): ✓ 1, 2, 11, 12, 23, 25. Entry: Lang ch. 1.
