@@ -18,7 +18,7 @@ Exercise source for phase 1–2: Cambridge Tripos example sheets (public).
 ## Method
 
 1. Before reading a proof, cover it. Try it yourself for 10–15 min.
-2. Paper first: scratch work, failed attempts, drafts.
+2. Paper first: scratch work, failed attempts, drafts. Conventions: `reference/paper.qmd`.
 3. One clean notebook per concept, in your own words: definition (with Czech term), intuition, your proof, an example and a counterexample. For each hypothesis: drop it, show what breaks.
 4. Proof shape: given / to show → technique → proof → check every hypothesis was used.
 5. Hand in at supervision. Fix what gets marked.
