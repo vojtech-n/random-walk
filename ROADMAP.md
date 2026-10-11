@@ -32,9 +32,9 @@ Exercise source for phase 1–2: Cambridge Tripos example sheets (public).
 Week of 2026-10-08:
 
 - [ ] Fix diagnostic ✗ items 4, 6, 8, 10 from the supervision questions
-- [ ] Lang ch. 1 (Numbers): all sections, ≥50% of exercises
+- [ ] Lang ch. 1 (Numbers): all sections, ≥50% of exercises → `foundations/01`–`05`
 - [ ] Re-do diagnostic problem 26 (odd + odd) after Lang ch. 1
-- [ ] Hammack ch. 1 (Sets) §1.1–1.3
+- [ ] Hammack ch. 1 (Sets) §1.1–1.3 → `proofs/01`–`03`
 - [ ] Next: Lang ch. 2–4 (linear equations, real numbers, quadratic equations)
 
 ## Re-prove queue
