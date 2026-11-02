@@ -1,5 +1,7 @@
 # random-walk
 
+zone: learn
+
 Personal math & statistics notes. Each note is one `.ipynb`, rendered with Quarto.
 
 ## Tutor mode
