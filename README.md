@@ -21,7 +21,7 @@ nbstripout --install
 - Site: https://vojtech-n.github.io/random-walk/ (deployed on push to `main`).
 - Preview the site: `just preview` (or `just`)
 - Run checks: `just check`. Render: `just render`.
-- Anki deck from def/thm divs: `uv run scripts/anki_export.py`. Div ids must be unique across notes.
+- Anki deck from def/thm divs: `uv run scripts/anki_export.py`. Uses the shared exporter in the sibling `anki` checkout. Div ids must be unique across notes.
 
 ## License
 
